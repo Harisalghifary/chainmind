@@ -1,0 +1,29 @@
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Go
+backend/bin/
+backend/chainmind
+backend/coverage.out
+backend/coverage.html
+
+# Node / Next.js
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.env*.local
+frontend/next-env.d.ts
+frontend/.turbo/
+frontend/npm-debug.log*
+frontend/yarn-error.log*
+
+# Editors / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Local data dumps
+*.log
