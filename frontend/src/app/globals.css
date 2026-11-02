@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink-950 text-slate-300 antialiased;
+  }
+
+  ::selection {
+    @apply bg-signal/25 text-white;
+  }
+}
+
+@layer components {
+  .panel {
+    @apply rounded-2xl border border-line/80 bg-ink-900/80 backdrop-blur-sm;
+  }
+
+  .eyebrow {
+    @apply font-mono text-[11px] uppercase tracking-[0.22em] text-signal;
+  }
+
+  .nav-link {
+    @apply text-sm text-slate-400 transition-colors hover:text-white;
+  }
+
+  .mono-label {
+    @apply font-mono text-[11px] uppercase tracking-[0.18em] text-slate-500;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .markdown {
+    @apply text-sm leading-6 text-slate-400;
+  }
+
+  .markdown p {
+    @apply text-sm leading-6 text-slate-400;
+  }
+
+  .markdown p + p {
+    @apply mt-3;
+  }
+
+  .markdown strong {
+    @apply font-medium text-slate-200;
+  }
+
+  .markdown ul {
+    @apply mt-2 list-disc space-y-1 pl-5;
+  }
+
+  .markdown ol {
+    @apply mt-2 list-decimal space-y-1 pl-5;
+  }
+
+  .markdown a {
+    @apply text-signal underline decoration-signal/30 underline-offset-2;
+  }
+
+  .markdown code {
+    @apply rounded border border-line/60 bg-ink-950 px-1 py-0.5 font-mono text-[12px] text-signal-soft;
+  }
+
+  .markdown pre {
+    @apply mt-3 overflow-x-auto rounded-lg border border-line/70 bg-ink-950 p-3 font-mono text-[12px] leading-6 text-slate-300;
+  }
+
+  .markdown pre code {
+    @apply border-0 bg-transparent p-0 text-slate-300;
+  }
+
+  .markdown h1,
+  .markdown h2,
+  .markdown h3 {
+    @apply mt-3 font-medium text-white;
+  }
+}
+
+/* Keep long Solidity lines scrollable inside code panels. */
+.code-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #1c2530 transparent;
+}
